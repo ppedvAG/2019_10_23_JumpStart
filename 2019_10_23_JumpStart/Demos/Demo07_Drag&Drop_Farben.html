@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Farben</title>
+    <style>
+        * {
+            margin: 0px;
+        }
+
+        /* Farbangabe mit Farbname: */
+
+        #wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            width: 100%;
+            padding: 1%;
+            background-color: aqua;
+        }
+
+        div[class^="color"] {
+            width: 200px;
+            height: 200px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 2.5em;
+            padding: 0.5em;
+            font-family: Verdana, sans-serif;
+        }
+
+
+        /* Farbangabe mit rgb: */
+
+        .color1 {
+            background-color: rgb(128, 0, 128);
+        }
+
+        /* Farbangabe mittels Hexcode: */
+
+        .color2 {
+            background-color: #800080;
+        }
+
+        /* Farbangabe mittels hsl: */
+
+        .color3 {
+            background-color: hsl(300, 100%, 25%);
+        }
+
+        .color4 {
+            background-color: rgba(128, 0, 128, 0.3);
+        }
+
+        .text{
+            text-align: center;
+            padding: 1em;
+            font-family: Verdana, sans-serif;
+            font-size: 1.5em;
+            color: rgb(56, 56, 56);
+        }
+
+        #dropzone {
+            display: flex;
+            width: 100%;
+            height: 500px;
+            background-color: inherit;
+            padding: 0.5em;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <div class="color1">RGB</div>
+        <div class="color2">Hexcode</div>
+        <div class="color3">HSL</div>
+        <div id="dragdiv" class="color4" draggable="true" ondragstart="drag(event)">RGBA</div>
+    </div>
+    <div class="text">Um zu sehen, dass das vierte Element tatsächlich die gleiche Farbe hat, aber transparent ist, ziehe es hierher:</div>
+    <div id="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)">
+        
+    </div>
+
+    <script>
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+    </script>
+
+</body>
+
+</html>

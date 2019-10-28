@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>if-else</title>
+    <style>
+        .demo {
+            height: 100px;
+            width: 100px;
+            border: 2px solid green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="demo" id="demo"></div>
+    <button onclick="checkX();">OK</button>
+
+    <script>
+        var demoDiv = document.getElementById('demo');
+        var x = 5;
+        var y = 15;
+
+        function checkX() {
+            if (x < y) {
+                demoDiv.style.backgroundColor = 'green';
+                alert('Wert von X ist kleiner als Wert von Y.');
+            }
+            else if (x > y) {
+                demoDiv.style.backgroundColor = 'yellow';
+            }
+            else if (x == y) {
+                demoDiv.style.backgroundColor = 'blue';
+            }
+            else {
+                demoDiv.style.backgroundColor = 'red';
+            }
+        }
+
+        /* Kurzschreibweise */
+
+        // Bedingung ? true : false;
+        // (x == y) ? myFunction1() : myFunction2();
+
+        (x == y) ? alert('Stimmt!') : alert('Stimmt nicht!');
+
+
+
+    </script>
+</body>
+
+</html>

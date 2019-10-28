@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Block und Inline</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .demo {
+            height: 100px;
+            background-color: gold;
+        }
+
+        .container {
+            /* width: 500px; */
+            border: 2px solid green;
+        }
+
+        .container div {
+            height: 100px;
+            width: 100px;
+            background-color: lightblue;
+            border: 1px solid black;
+            display: inline-block;
+        }
+
+        .dem01 {
+            height: 100px;
+        }
+
+        .img-box{
+            width: 250px;
+            border: 2px solid red;
+            /* padding: 5px; */
+        }
+
+        .demopic{
+            width: 100%;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="demo"></div>
+    <div class="container">
+        <div class="dem01"></div>
+        <div class="dem02"></div>
+        <div class="dem03"></div>
+        <div class="dem04"></div>
+        <div class="dem05"></div>
+        <div class="dem06"></div>
+        <div class="dem07"></div>
+        <div class="dem08"></div>
+        <div class="dem09"></div>
+    </div>
+
+    <div class="img-box">
+        <img class="demopic" src="images/puppy01.jpg" alt="Puppy">
+    </div>
+</body>
+
+</html>

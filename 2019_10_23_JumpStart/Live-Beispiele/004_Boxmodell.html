@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Boxmodell</title>
+    <style>
+        body{
+            margin: 0;
+        }
+
+        div{
+            height: 50px;
+            width: 50px;
+            background-color: aqua;
+        }
+
+        .demo01{
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .demo02{
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .demo03{
+            padding: 10px;
+            border: 3px solid black;
+        }
+        .demo04{
+            padding: 10px;
+            border: 3px solid black;
+            box-sizing: border-box;
+        }
+
+        .demo-span{
+            display:inline-block;
+            background-color: cadetblue;
+            padding: 10px;
+            width: 25%;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo01">text</div>
+    <div class="demo02">text</div>
+    <div class="demo03">text</div>
+    <div class="demo04">text</div>
+    <span class="demo-span">text</span><!-- 
+     --><span class="demo-span">text</span><!-- 
+     --><span class="demo-span">text</span><!-- 
+     --><span class="demo-span">text</span>
+</body>
+</html>

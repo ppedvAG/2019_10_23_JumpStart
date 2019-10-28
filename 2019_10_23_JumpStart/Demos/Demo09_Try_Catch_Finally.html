@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS Finally</title>
+    </head>
+<body>
+
+<p>Bitte geben Sie eine Zahl zwischen 5 und 10 ein:</p>
+
+<input id="input" type="text">
+<button type="button" onclick="myFunction()">Testen</button>
+
+<p id="message"></p>
+
+<script>
+function myFunction() {
+    var message, x; // Variablen deklarieren
+
+    message = document.getElementById("message"); // Variablen zuweisen
+    message.innerHTML = "";
+    x = document.getElementById("input").value;
+    try { 
+        if(x == "")  throw "ist leer.";
+        if(isNaN(x)) throw "ist keine Zahl.";        
+        if(x > 10)   throw "ist zu hoch.";
+        if(x < 5)    throw "ist zu niedrig.";
+    }
+    catch(err) {
+        message.innerHTML = "Eingabewert " + err;
+    }
+
+// -------------- Ohne finally bleibt der letzte eingegebene Wert im Feld stehen.
+    /* finally {
+        document.getElementById("demo").value = ""; //setzt das Input-Feld auf leer zurück.
+    } */
+
+}
+</script>
+
+</body>
+</html>

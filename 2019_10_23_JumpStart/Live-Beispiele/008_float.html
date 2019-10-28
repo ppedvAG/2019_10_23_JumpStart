@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>float</title>
+    <style>
+        .container{
+            border: 2px solid green;
+            background-color: coral;
+        }
+
+        .float-item{
+            height: 100px;
+            width: 100px;
+            border: 1px solid black;
+            background-color: cornflowerblue;
+            float: left;
+        }
+
+        .float-item2{
+            height: 100px;
+            width: 300px;
+            border: 1px solid black;
+            background-color: cornflowerblue;
+            float: left;
+        }
+
+        .clearboth{
+            clear: both;
+        }
+
+        /* .container::after{
+            content: "";
+            display: block;
+            clear: both;
+        } */
+        .inline-container {
+            /* width: 500px; */
+            border: 2px solid red;
+        }
+
+        .inline-container div {
+            height: 100px;
+            width: 100px;
+            background-color: lightblue;
+            border: 1px solid black;
+            display: inline-block;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="float-item"></div>
+        <div class="float-item2"></div>
+        <div class="float-item"></div>
+        <!-- <div class="float-item"></div>
+        <div class="float-item"></div>
+        <div class="float-item"></div>
+        <div class="float-item"></div>
+        <div class="float-item"></div>
+        <div class="float-item"></div> -->
+        <div class="clearboth"></div>
+    </div>
+
+    <div class="inline-container">
+            <div class="dem01"></div>
+            <div class="dem02"></div>
+            <div class="dem03"></div>
+            <div class="dem04"></div>
+            <div class="dem05"></div>
+            <div class="dem06"></div>
+            <div class="dem07"></div>
+            <div class="dem08"></div>
+            <div class="dem09"></div>
+    </div>
+
+
+    
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Schleife</title>
+</head>
+<body>
+    <div id="demo"></div>
+
+    <script>
+
+        var demoDiv = document.getElementById('demo');
+        var text = "";
+
+    /* WHILE-Schleife */
+
+    /* var i = 0;  // iterator (Zähler)
+
+    while(i < 10){
+        text += 'Wert: ' + i + '<br>';
+        i++;
+    } */
+
+    
+
+
+    /* FOR-Schleife */
+
+    for(var i = 0; i < 10; i++){
+        text += 'Wert: ' + i + '<br>';
+    }
+
+    document.getElementById('demo').innerHTML = text;
+
+
+
+    
+    </script>
+</body>
+</html>

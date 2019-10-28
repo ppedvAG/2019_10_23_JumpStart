@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>em vs px</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Cambria, sans-serif;
+            /* font-size: 16px; */
+        }
+
+        .flex-container {
+            display: flex;
+            flex-flow: row;
+            flex-wrap: wrap;
+        }
+
+        .no-style {
+            background-color: antiquewhite;
+            width: 25%;
+        }
+
+        .px-test {
+            background-color: rgb(224, 253, 253);
+            font-size: 16px;
+            padding: 16px;
+            width: 25%;
+        }
+
+        .px-test h1 {
+            font-size: 40px;
+        }
+
+        .em-test {
+            /* font-family: Castellar; */
+            background-color: rgb(255, 202, 255);
+            font-size: 1em;
+            padding: 1em;
+            width: 25%;
+        }
+
+        .em-test h1 {
+            font-size: 2.5em;
+        }
+
+        .vw-test {
+            background-color: rgb(214, 255, 214);
+            font-size: 1vw;
+            padding: 1vw;
+            width: 25%;
+        }
+
+        .vw-test h1 {
+            font-size: 2.5vw;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex-container">
+        <div class="no-style">
+            <header>
+            <h1>Div ohne Styling</h1>
+            <p><strong>(bzw. nur
+                <em>background-color</em>)</strong></p>
+                </header>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi odit voluptatem laborum rerum necessitatibus temporibus suscipit,
+            ducimus aspernatur voluptatum quae quia, dolorum magnam accusamus, cumque aliquid ut. A quis vel ad adipisci
+            et, blanditiis non nisi excepturi quos dicta similique consequuntur qui fugiat neque harum accusamus iusto ipsam
+            exercitationem, porro ipsum tempora fuga quidem commodi! Neque architecto aspernatur quia aut commodi totam explicabo
+            odio quod sunt corporis provident quas, id dolore consequuntur voluptatibus placeat facere dignissimos tenetur
+            omnis ut modi cupiditate? Veniam vero nostrum qui quasi reiciendis maiores blanditiis ea tempore sapiente. Veniam
+            odit quasi, vero aperiam repellendus ducimus tenetur!</div>
+        <div class="px-test">
+            <h1>Absatz in px</h1>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi odit voluptatem laborum rerum necessitatibus temporibus suscipit,
+            ducimus aspernatur voluptatum quae quia, dolorum magnam accusamus, cumque aliquid ut. A quis vel ad adipisci
+            et, blanditiis non nisi excepturi quos dicta similique consequuntur qui fugiat neque harum accusamus iusto ipsam
+            exercitationem, porro ipsum tempora fuga quidem commodi! Neque architecto aspernatur quia aut commodi totam explicabo
+            odio quod sunt corporis provident quas, id dolore consequuntur voluptatibus placeat facere dignissimos tenetur
+            omnis ut modi cupiditate? Veniam vero nostrum qui quasi reiciendis maiores blanditiis ea tempore sapiente. Veniam
+            odit quasi, vero aperiam repellendus ducimus tenetur!</div>
+        <div class="em-test">
+            <h1>Absatz in em</h1>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi odit voluptatem laborum rerum necessitatibus temporibus suscipit,
+            ducimus aspernatur voluptatum quae quia, dolorum magnam accusamus, cumque aliquid ut. A quis vel ad adipisci
+            et, blanditiis non nisi excepturi quos dicta similique consequuntur qui fugiat neque harum accusamus iusto ipsam
+            exercitationem, porro ipsum tempora fuga quidem commodi! Neque architecto aspernatur quia aut commodi totam explicabo
+            odio quod sunt corporis provident quas, id dolore consequuntur voluptatibus placeat facere dignissimos tenetur
+            omnis ut modi cupiditate? Veniam vero nostrum qui quasi reiciendis maiores blanditiis ea tempore sapiente. Veniam
+            odit quasi, vero aperiam repellendus ducimus tenetur!</div>
+        <div class="vw-test">
+            <h1>Absatz in vw</h1>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi odit voluptatem laborum rerum necessitatibus temporibus suscipit,
+            ducimus aspernatur voluptatum quae quia, dolorum magnam accusamus, cumque aliquid ut. A quis vel ad adipisci
+            et, blanditiis non nisi excepturi quos dicta similique consequuntur qui fugiat neque harum accusamus iusto ipsam
+            exercitationem, porro ipsum tempora fuga quidem commodi! Neque architecto aspernatur quia aut commodi totam explicabo
+            odio quod sunt corporis provident quas, id dolore consequuntur voluptatibus placeat facere dignissimos tenetur
+            omnis ut modi cupiditate? Veniam vero nostrum qui quasi reiciendis maiores blanditiis ea tempore sapiente. Veniam
+            odit quasi, vero aperiam repellendus ducimus tenetur!</div>
+    </div>
+</body>
+
+</html>

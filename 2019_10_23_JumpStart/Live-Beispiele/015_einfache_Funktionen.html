@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>einfache Funktionen</title>
+
+    <style>
+        .demo {
+            height: 100px;
+            width: 100px;
+            border: 2px solid green;
+        }
+
+        /* .demo:hover{
+            background-color: blue;
+        } */
+
+        div[class^='invisible']{
+            border: 1px solid black;
+            height: 100px;
+            width: 100px;
+            background-color: blue;
+        }
+
+        .invisible01{
+            opacity: 0.5;
+        }
+
+        .invisible02{
+            display:none;
+        }
+
+        .invisible03{
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="invisible01">opacity</div>
+    <div class="invisible02" id="displayDemo">display:none</div>
+    <div class="invisible03" id="visibilityDemo">visibility</div>
+    <button onclick="makeVisible();">Mach sichtbar!</button>
+
+
+    <div id="demo" class="demo" min="0">
+        Testtext
+    </div>
+    <div id="demo2" class="demo"></div>
+    <button id="btn-ok" onclick="setBgRed();">OK</button>
+    <button id="btn-ok2">OK2</button>
+    <button id="btn-ok3" onclick="myText();">OK3</button>
+
+
+
+    <script>
+
+        var demoDiv = document.getElementById('demo');
+        var myStyle1 = demoDiv.style;
+
+        function setBgRed() {
+            myStyle1.backgroundColor = 'red';
+        }
+
+        /* function call - Funktionsaufruf */
+
+        // setBgRed();
+
+        // document.getElementById('btn-ok2').addEventListener('click', setBgRed);
+
+        document.getElementById('btn-ok2').addEventListener('click', function () {
+            demoDiv.style.backgroundColor = 'green';
+        });
+
+
+        // function myName() {  /* toller Code */ }
+
+        // anonyme Funktion:   function(){    }
+
+        // console.log(demoDiv.innerHTML);
+
+
+        function myText() {
+            document.getElementById('demo2').innerHTML = demoDiv.getAttribute('min');
+        }
+
+
+
+        var nettoPreis = 100;
+
+        /* wir wollen einen Bruttopreis berechnen */
+        
+        function bruttoRechner(netto){
+
+            var brutto = netto * 1.19;
+            return brutto;
+
+        }
+
+
+        var bruttoPreis = bruttoRechner(nettoPreis);
+
+        document.getElementById('demo').innerHTML = bruttoPreis;
+        
+
+        demoDiv.addEventListener('mouseover', function(){
+            this.style.backgroundColor = 'yellow';
+        });
+
+        demoDiv.addEventListener('mouseout', function(){
+            this.style.backgroundColor = 'initial';
+        });
+
+        function makeVisible(){
+            document.getElementById('displayDemo').style.display = 'block';
+        }
+
+
+
+    </script>
+</body>
+
+</html>

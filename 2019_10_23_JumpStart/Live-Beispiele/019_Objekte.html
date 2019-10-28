@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Objekte</title>
+</head>
+<body>
+
+    <div id="demo"></div>
+    
+    <script>
+        var x = 5;
+
+        function Person(firstName, lastName){
+            this.firstName = firstName;
+            this.lastName = lastName;
+        }
+
+        var Leo = new Person('Leonard', 'Hlavin');
+
+
+
+        var Agent = {
+            firstName: 'James',
+            lastName: 'Bond',
+            age: 40,
+            fullName: function(){
+                return this.firstName + ' ' + this.lastName;
+            }
+        };
+
+        document.getElementById('demo').innerHTML = Leo.lastName;
+    </script>
+</body>
+</html>

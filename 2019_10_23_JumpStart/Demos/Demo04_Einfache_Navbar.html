@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Navigationsleiste</title>
+
+  <style>
+
+    *{
+      margin:0;
+      box-sizing: border-box;
+    }
+
+    body{
+      font-size: 16px;
+      font-family: Verdana, Tahoma, sans-serif;
+    }
+
+    .company-name{
+      background-color: lightgray;
+      background: linear-gradient(lightgray, rgb(253, 241, 199));
+      color: lightseagreen;
+      width: 100%;
+      min-height: 2.5em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 3em;
+      font-size: 2.5em;
+      font-family: Vivaldi, serif;
+      padding: 0.2em 1em;
+      font-weight: bold;
+    }
+
+    nav{
+      background-color: rgb(253, 241, 199);
+      border-top: 5px double lightslategray;
+    }
+
+    .logo{
+      color: orangered;
+      text-shadow: 0px 0px 20px orange;
+    }
+
+    ul{
+      list-style-type: none;
+      padding:0;
+      -webkit-margin-after:0;
+      -webkit-margin-before:0;
+    }
+
+    li{
+      float: left;
+      overflow: hidden;
+      height: 3em;
+    }
+
+    a{
+      font-size: 1em;
+      color: lightslategray;
+      text-decoration: none;
+      display: inline-block;
+      padding: 1em 2em;
+    }
+
+    /* a:not(.last){
+      border-right: 1px solid black;
+    } */
+
+    a:hover{
+      color: floralwhite;
+      background-color: lightslategray;
+    }
+
+    .clearboth{
+      clear:both;
+    }
+
+    .active{
+      border-bottom: 3px solid lightslategray;
+    }
+    
+  </style>
+
+</head>
+
+<body>
+
+<div class="company-name"><div>My Company Name</div> <div class="logo">☀</div></div>
+  <nav id="navbar">
+     <ul>
+       <li class="active"><a href="#" >Home</a></li>
+       <li><a href="#">About</a></li>
+       <li><a href="#">Company</a></li>
+       <li ><a href="#">Shop</a></li>
+       <div class="clearboth"></div>
+     </ul>
+
+
+  </nav>
+
+</body>
+
+</html>

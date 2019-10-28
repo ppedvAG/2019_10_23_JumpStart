@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flexbox</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .container{
+            background-color: lawngreen;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around; /* horizontale Ausrichtung der Elemente in diesem Container */
+            /* padding: 50px; */
+            align-content: center; /* vertikale Ausrichtung der Elemente in der Flexbox */
+            height: 100vh;
+        }
+
+        .flex-item{
+            /* margin: 20px; */
+            height: 100px;
+            width: 250px;
+            background-color: forestgreen;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="flex-item"></div>
+        <div class="flex-item"></div>
+        <div class="flex-item"></div>
+        <div class="flex-item"></div>
+        <div class="flex-item"></div>
+        <div class="flex-item"></div>
+        <div class="flex-item"></div>
+        <div class="flex-item"></div>
+        <div class="flex-item"></div>
+    </div>
+</body>
+</html>

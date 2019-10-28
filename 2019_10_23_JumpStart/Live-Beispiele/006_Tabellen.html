@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tabellen</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        caption {
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+
+        td,
+        th {
+            border: 2px solid white;
+            padding: 5px 10px;
+            width: 100px;
+        }
+
+        th {
+            color: white;
+            background-color: coral;
+        }
+
+        td {
+            
+            text-align: center;
+        }
+
+        tr:nth-child(odd){
+            background-color: rgb(255, 241, 235);
+        }
+
+        tr:nth-child(even){
+            background-color: rgb(246, 205, 187);
+        }
+    </style>
+</head>
+
+<body>
+
+    <table>
+        <caption>Obstlager</caption><!-- -Tabellenüberschrift, direkt nach table-Tag -->
+        <thead>
+            <tr>
+                <th>Obst</th><!-- tableheader - Spaltenüberschriften -->
+                <th>Menge</th>
+                <th>Preis</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Apfel</td><!-- tabledata ... so viele Spalten gibt es -->
+                <td>200</td>
+                <td>0.15</td>
+            </tr><!-- tablerow (Tabellenzeile) -->
+            <tr>
+                <td>Banane</td>
+                <td>150</td>
+                <td>0.20</td>
+            </tr>
+            <tr>
+                <td>Birne</td>
+                <td>220</td>
+                <td>0.17</td>
+            </tr>
+            <tr>
+                <td>Kiwi</td>
+                <td>100</td>
+                <td>0.20</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Leos Tabelle</td>
+            </tr>
+        </tfoot>
+    </table>
+
+
+
+</body>
+
+</html>

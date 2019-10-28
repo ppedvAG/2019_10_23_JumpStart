@@ -1,0 +1,78 @@
+/* Typselektor */
+/* spricht ALLE Elemente dieses Typs an */
+div{
+    background-color: coral;
+}
+
+/* Klassenselektor */
+/* spricht alle Elemente mit dieser Klasse an */
+.aqua{
+    background-color: aqua;
+    text-align: center; /* HORIZONTALE Ausrichtung */
+}
+
+/* ID-Selektor */
+/* spricht DAS EINE Element mit dieser Id an (eindeutig!!) */
+#myFirstId{
+    background-color: chartreuse;
+}
+
+/* ------------------------ */
+
+.height-demo{
+    height: 100px;
+    width: 300px;
+}
+
+/* ein- und 
+mehrzeilige Kommentare */
+
+body{
+    margin: 0;
+    font-size: 16px;
+}
+.span1{
+    background-color: cornflowerblue;
+    height: 50px;
+    display: inline-block;
+}
+
+.span2{
+    background-color: darkorange;
+    height: 50px;
+    display: inline-block;
+}
+
+.span3{
+    background-color: gold;
+    height: 50px;
+    display: inline-block;
+}
+
+.demo1{
+    font-family: 'Segoe UI', 'Tahoma', Geneva, Verdana, sans-serif;
+}
+
+.demo2{
+    font-family: Lato;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: underline;
+    color: greenyellow;
+}
+
+.demo3{
+    border-width: 2px;
+    border-style: solid;
+    border-color: greenyellow;
+}
+
+.demo4{
+    /* shorthand-property (Kurzschreibweise) */
+    border: 2px solid cadetblue;
+}
+
+.no-underline{
+    text-decoration: none;
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formularelemente</title>
+    <style>
+        .inp-container {
+            margin-bottom: 10px;
+        }
+
+        .my-form {}
+
+        .my-lbl {
+            width: 100px;
+            display: inline-block;
+            /* background-color: cyan; */
+        }
+
+       /*  textarea{
+            resize: none;
+        } */
+    </style>
+</head>
+
+<body>
+    <!-- form = Formular -->
+    <form action="#" method="POST" class="my-form">
+        <div class="inp-container">
+            <label for="first-name" class="my-lbl">Vorname:</label>
+            <input type="text" id="first-name" class="my-inp" name="first-name" placeholder="Vorname">
+        </div>
+        <div class="inp-container">
+            <label for="last-name" class="my-lbl">Nachname:</label>
+            <input type="text" id="last-name" class="my-inp" name="last-name" pattern="[a-zA-Z]{3,30}">
+        </div>
+        <div class="inp-container">
+            <label for="pw" class="my-lbl">Passwort:</label>
+            <input type="password" id="pw" class="my-inp" name="pw">
+        </div>
+        <div class="inp-container">
+            <label for="test" class="my-lbl">Test:</label>
+            <input type="number" id="test" min="1" max="100" step="10">
+        </div>
+        <div class="inp-container">
+            <label for="email" class="my-lbl">Email:</label>
+            <input type="email" id="email" class="my-inp" name="email">
+        </div>
+        <div class="inp-container">
+            <label for="homepage" class="my-lbl">Homepage:</label>
+            <input type="url" id="homepage" class="my-inp" name="homepage" placeholder="https://demo.com"
+                value="https://" title="Bitte geben Sie https:// ein.">
+        </div>
+        <div class="inp-container">
+            <label for="test2" class="my-lbl">Test:</label>
+            <input type="color" id="test2" class="my-inp" name="test2">
+        </div>
+        <div class="inp-container">
+            <label for="test3" class="my-lbl">Test:</label>
+            <input type="range" id="test3" class="my-inp" name="test3" min="50" max="250">
+        </div>
+        <div class="inp-container">
+            <label for="Margerita" class="my-lbl">Margerita</label>
+            <input type="radio" id="Margerita" class="my-inp" name="Pizza" checked>
+        </div>
+        <div class="inp-container">
+            <label for="Tonno" class="my-lbl">Tonno</label>
+            <input type="radio" id="Tonno" class="my-inp" name="Pizza">
+        </div>
+        <div class="inp-container">
+            <label for="Rucola" class="my-lbl">Rucola</label>
+            <input type="checkbox" id="Rucola" class="my-inp" name="Extras">
+        </div>
+        <div class="inp-container">
+            <label for="Mais" class="my-lbl">Mais</label>
+            <input type="checkbox" id="Mais" class="my-inp" name="Extras">
+        </div>
+
+        <textarea name="comments" id="comments"
+                  cols="30" rows="10" 
+                  placeholder="Bitte geben Sie hier Ihr Feedback ein....">
+        </textarea>
+
+        <select name="" id="">
+            <option value="">Margherita</option>
+            <option value="">Tonno</option>
+            <option value="">Della Casa</option>
+        </select>
+
+        <div class="inp-container">
+            <input type="submit" value="Abschicken">
+            <input type="reset" value="Zurücksetzen">
+        </div>
+    </form>
+
+
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>UE Range</title>
+    <style>
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+            width: 300px;
+            justify-content: space-around;
+        }
+
+        .output{
+            padding: 20px;
+            border: 2px solid black;
+        }
+
+        .myVal{
+            width: 60px;
+            text-align: center;
+            padding: 20px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container" id="container">
+        <div class="output" id="minDiv"></div>
+        <input id="myInp" type="range" min="3" max="200" oninput="showVal();">
+        <div class="output" id="maxDiv"></div>
+
+        <div id="myVal" class="myVal"></div>
+    </div>
+
+    <script>
+        // ich hinterlege das Objekt (das Div) mit der ID minDiv in einer Variable:
+        var minOutput = document.getElementById('minDiv');
+        // ich hinterlege das Objekt (das Div) mit der ID maxDiv in einer Variable:
+        var maxOutput = document.getElementById('maxDiv');
+        var myInp = document.getElementById('myInp');
+        var myVal = document.getElementById('myVal');
+
+        // Min-Wert soll in Div namens minDiv (minOutput) geschrieben werden
+        // document.getElementById('minDiv').innerHTML = document.getElementById('myInp').getAttribute('min');
+        // Kürzere Schreibweise (mit Verwendung der Variablen):
+        minOutput.innerHTML = myInp.getAttribute('min');
+
+        // Max-Wert in Div schreiben:
+        maxOutput.innerHTML = myInp.getAttribute('max');
+
+        // Startwert in Div schreiben: 
+        myVal.innerHTML = myInp.value;
+
+        function showVal(){
+            myVal.innerHTML = myInp.value;
+        }
+
+
+
+
+    
+    </script>
+</body>
+</html>

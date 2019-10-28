@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Arrays</title>
+    <style>
+        .demo{
+            border: 2px solid black;
+            min-height: 100px;
+        }
+
+        div .myClass{
+
+        }
+
+        
+    </style>
+</head>
+<body>
+
+
+
+
+    <div>
+        <span></span>
+        <div>
+            <p>
+                <span></span>
+            </p>
+        </div>
+    </div>
+    <div class="demo" id="demo"></div>
+    <button onclick="textOutput();">Add Durian</button>
+    <button onclick="removeLast();">Remove Last</button>
+    <button onclick="spliceFruit();">Splice</button>
+    <button onclick="combineArrays();">combine Arrays</button>
+
+    <script>
+        
+        var demoDiv = document.getElementById('demo');
+
+        /*  ARRAY: */
+
+        var fruitSalad = ['Banane', 'Apfel', 'Kiwi'];
+        // Stelle            0         1        2
+        // length            1         2        3 Elemente in meinem Array
+
+
+        // for(var i = 0; i < fruitSalad.length; i++){ /* toller Code */ }
+
+
+        demoDiv.innerHTML = fruitSalad.sort();
+
+        function textOutput(){
+            fruitSalad.push('Durian');
+            demoDiv.innerHTML += '<br>' + fruitSalad.join(', ');
+        }
+
+        function removeLast(){
+            fruitSalad.pop();
+            demoDiv.innerHTML += '<br>' + fruitSalad.join(', ');
+        }
+
+        //shift/unshift: an erster Stelle wegnehmen/hinzufügen
+
+        function spliceFruit(){
+            fruitSalad.splice(1, 0, 'Kirsche', 'Birne');
+            demoDiv.innerHTML += '<br>' + fruitSalad.join(', ');
+        }
+
+
+        var citrusFruits = ['Orange', 'Kumquat', 'Limette'];
+        var allFruits;
+
+        function combineArrays(){
+            allFruits = fruitSalad.concat(citrusFruits);
+            demoDiv.innerHTML += '<br>' + allFruits.join(', ');
+        }
+
+        
+
+
+
+        demoDiv.innerHTML += '<br>' + fruitSalad[1];
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

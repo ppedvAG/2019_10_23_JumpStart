@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Bookman Old Style', serif;
+            font-size: 16px;
+            background-color: rgb(250, 245, 221);
+        }
+
+        .container {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .text {
+            width: 50%;
+            margin: 3em;
+            padding: 35px;
+            align-items: center;
+            text-align: justify;
+        }
+
+        .img-wrapper {
+            max-width: 300px;
+            max-height: 294px;
+            margin: 3em;
+        }
+
+        .img {
+            transition-duration: 1.5s;
+            transform-origin: 70% 0;
+        }
+
+        #test1,
+        #test2,
+        #test3 {
+            overflow: hidden;
+            border: 8px solid black;
+            border-radius: 20px;
+            max-width: 230px;
+            max-height: 215px;
+            transition-duration: 1.5s;
+        }
+
+        #test1:hover {
+            transform: rotate(-20deg);
+            /* box-shadow: 5px 10px 20px black; */
+        }
+
+        #img1:hover {
+            transform: rotate(20deg);
+        }
+
+        .text:first-letter {
+            font-family: Vivaldi, fantasy;
+            font-size: 3em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="img-wrapper">
+            <div id="test1">
+                <img id="img1" class="img" src="bild_klein.jpg" alt="seagull">
+            </div>
+        </div>
+        <div class="text">
+            Bei diesem Beispiel wurde der Effekt rein mit CSS erzielt. Dabei haben sowohl das umschließende Div, als auch das Bild selbst
+            einen
+            <code>:hover</code>-Effekt. Das kann erwünscht sein; allerdings macht es hier auch einen großen Unterschied, ob der Mauszeiger nur
+            über dem Rahmen schwebt oder über dem Bild (und somit zugleich über dem umschließenden Div).
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="img-wrapper">
+            <div id="test2" onmouseover="transform2();">
+                <img id="img2" class="img" src="bild_klein.jpg" alt="seagull">
+            </div>
+        </div>
+        <div class="text">
+            Für diese Lösung wurde eine einfache JavaScript-Funktion verwendet. Bei einem Mouseover über das umschließende Div wird die
+            Transformation für beide Elemente gestartet. Allerdings bleibt das Bild dann auch in dieser Position.
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="img-wrapper">
+            <div id="test3" onmouseover="transform3();" onmouseout="initial3();">
+                <img id="img3" class="img" src="bild_klein.jpg" alt="seagull">
+            </div>
+        </div>
+        <div class="text">
+            Soll das Bild wieder in die ursprüngliche Position zurückfahren, wenn man nicht mehr mit der Maus darüberschwebt, kann man,
+            wie hier, eine weitere Funktion für
+            <code>onmouseout</code> aufrufen. Eine andere Möglichkeit wäre, die
+            <code>toggle()</code>-Funktion von jQuery zu benutzen.
+        </div>
+    </div>
+
+
+    <script>
+
+
+        function transform2() {
+            var div = document.getElementById('test2');
+            var img = document.getElementById('img2');
+
+            div.style.transform = "rotate(-20deg)";
+            img.style.transform = "rotate(20deg)";
+        }
+
+        function transform3() {
+            var div = document.getElementById('test3');
+            var img = document.getElementById('img3');
+
+            div.style.transform = "rotate(-20deg)";
+            img.style.transform = "rotate(20deg)";
+        }
+
+        function initial3() {
+            var div = document.getElementById('test3');
+            var img = document.getElementById('img3');
+
+            div.style.transform = "rotate(0deg)";
+            img.style.transform = "rotate(0deg)";
+        }
+    </script>
+</body>
+
+</html>

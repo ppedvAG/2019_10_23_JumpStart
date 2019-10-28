@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Elemente ansprechen</title>
+    <style>
+        .demo{
+            height: 100px;
+            width: 100px;
+            border: 2px solid green;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="demo" class="demo">
+        <p>Testtext</p>
+    </div>
+
+
+
+    <script>
+        
+        // document.getElementById('demo').style.backgroundColor = 'red';
+
+        //document.getElementById('demo').innerHTML = 'HALLO!!!';
+
+        //document.getElementById('demo').innerHTML += 'HALLO!!!';
+
+        document.getElementById('demo').innerHTML += '<p>' + 'HALLO!!!' + '</p>';
+
+
+
+        
+
+
+    </script>
+</body>
+</html>
